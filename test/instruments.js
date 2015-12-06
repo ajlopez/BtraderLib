@@ -30,6 +30,12 @@ exports['get MERVAL instruments'] = function (test) {
         test.ok(sl.exist(data.instruments, { symbolCode: "ALUA", name: "Aluar Aluminio Argentino SAIC", type: "equity" }));
         test.ok(sl.all(data.instruments, function (item) { return item.data; }));
         
+        data.instruments.forEach(function (instrument) {
+            test.ok(instrument.data);
+            test.strictEqual(typeof instrument.data, 'object');
+            test.equal(instrument.type, 'equity');
+        });
+        
         test.done();
     });
 };
