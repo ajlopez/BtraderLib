@@ -31,9 +31,13 @@ exports['get MERVAL instruments'] = function (test) {
         test.ok(sl.all(data.instruments, function (item) { return item.data; }));
         
         data.instruments.forEach(function (instrument) {
+            test.equal(instrument.type, 'equity');
+            
             test.ok(instrument.data);
             test.strictEqual(typeof instrument.data, 'object');
-            test.equal(instrument.type, 'equity');
+            test.ok(instrument.data.nowPrice);
+            test.ok(instrument.data.lastTradeDate);
+            test.ok(instrument.data.updateTime);
         });
         
         test.done();
