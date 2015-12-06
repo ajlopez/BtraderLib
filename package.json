@@ -1,0 +1,28 @@
+{
+  "name": "btraderlib",
+  "description": "Library to access Btrader API",
+  "keywords": [
+    "javascript",
+    "stock",
+    "api"
+  ],
+  "version": "0.0.1alpha",
+  "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajlopez/BtraderLib.git"
+  },
+  "main": "./lib/btraderlib.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "simpleunit ./test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "simplelists": "0.0.5",
+    "simpleunit": "0.0.6"
+  }
+}
+
