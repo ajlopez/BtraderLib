@@ -7,7 +7,6 @@ exports['get MERVAL instruments'] = function (test) {
     
     btlib.getInstruments('index/MERV', function (err, data) {
         test.ok(!err);
-        console.dir(data);
         test.ok(data);
         test.equal(data.code, "BCBA");
         test.equal(data.name, "Bolsa de Valores de Buenos Aires");
